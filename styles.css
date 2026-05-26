@@ -1,0 +1,631 @@
+/*
+ * ============================================
+ * GUIDE CAROUX TEMPLATE — STYLES.css
+ * Template pour accompagnateur en montagne
+ * Haut-Languedoc / Massif du Caroux
+ * ============================================
+ *
+ * VARIABLES A PERSONNALISER:
+ * --------------------------
+ * --guide-name        : Nom du guide (utilise aussi dans le HTML)
+ * --guide-tagline     : Tagline du hero
+ * --primary-color     : Couleur principale (vert foret)
+ * --secondary-color   : Couleur secondaire (ocre/terre)
+ * --guide-phone       : Numero de telephone
+ * --guide-email       : Email de contact
+ * --guide-photo-url   : URL de la photo du guide
+ * --guide-activities  : Liste des activites (editer dans HTML)
+ */
+
+:root {
+  /* PALETTE DE COULEURS — A PERSONNALISER */
+  --primary-color:      #2d4a22;   /* Vert foret — couleur principale */
+  --primary-light:      #4a7a33;   /* Vert plus clair */
+  --secondary-color:    #c4a848;   /* Ocre/terre — couleur secondaire */
+  --secondary-light:    #e8c850;   /* Ocre plus clair */
+  --accent-color:       #8b5a2b;   /* Marron bois */
+
+  --text-dark:          #1a1a1a;
+  --text-light:         #4a4a4a;
+  --text-muted:         #7a7a7a;
+  --bg-light:           #f8f6f1;   /* Pierre claire / crae */
+  --bg-warm:            #f2efe9;   /* Beige chaud */
+
+  /* TYPOGRAPHIE */
+  --font-serif:  'Cormorant Garamond', Georgia, serif;
+  --font-sans:   'Segoe UI', system-ui, sans-serif;
+
+  /* ESPACEMENT */
+  --spacing-xs:  0.5rem;
+  --spacing-sm:  1rem;
+  --spacing-md:  2rem;
+  --spacing-lg:  4rem;
+  --spacing-xl:  6rem;
+
+  /* BORDURE */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+}
+
+/* RESET */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-light);
+  line-height: 1.7;
+  background-color: var(--bg-light);
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { text-decoration: none; color: inherit; transition: color 0.3s; }
+ul { list-style: none; }
+
+.container {
+  width: min(1200px, 90vw);
+  margin-inline: auto;
+}
+
+/* ============================================
+   TYPOGRAPHIE
+   ============================================ */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: left;
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-title.center { text-align: center; }
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto var(--spacing-md);
+}
+
+.section-subtitle.center { text-align: center; }
+
+/* ============================================
+   BOUTONS
+   ============================================ */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-light);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 1.2rem 3rem;
+  font-size: 1rem;
+}
+
+/* ============================================
+   SECTIONS
+   ============================================ */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section:nth-child(even) { background-color: var(--bg-warm); }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  height: 100vh;
+  min-height: 600px;
+  background:
+    linear-gradient(rgba(15, 30, 10, 0.35), rgba(15, 30, 10, 0.4)),
+    url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1920&q=80')
+    center/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative;
+}
+
+/* NAVIGATION HERO */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 5vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(15, 30, 10, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover { color: var(--secondary-color); }
+
+/* Contenu hero */
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--spacing-lg);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--secondary-light);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 500px;
+  margin-bottom: var(--spacing-md);
+}
+
+/* SCROLL DOWN INDICATOR */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-indicator::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px auto 0;
+  border-right: 2px solid rgba(255,255,255,0.5);
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  transform: rotate(45deg);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ============================================
+   SECTION LE GUIDE
+   ============================================ */
+.guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.guide-photo {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.guide-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.guide-role {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.guide-section p {
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.05rem;
+}
+
+.guide-credentials li {
+  padding: var(--spacing-xs) 0;
+  font-size: 1rem;
+  color: var(--text-dark);
+}
+
+.guide-credentials .check {
+  color: var(--primary-color);
+  margin-right: var(--spacing-xs);
+  font-weight: bold;
+}
+
+/* ============================================
+   SECTION SORTIES
+   ============================================ */
+.sorties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.sortie-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* CARTE DESACTIVEE — pour masquer les activites non proposees */
+.sortie-card.hidden,
+.sortie-card:not(.active) {
+  display: none;
+}
+
+.sortie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+.sortie-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.sortie-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  padding: var(--spacing-sm) var(--spacing-md) 0;
+}
+
+.sortie-card p {
+  padding: 0 var(--spacing-md) var(--spacing-sm);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.sortie-meta {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md) var(--spacing-sm);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.sortie-card .btn-secondary {
+  margin: 0 var(--spacing-md) var(--spacing-md);
+}
+
+.sortie-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  background: var(--secondary-color);
+  color: var(--text-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* ============================================
+   SECTION POURQUOI LE CAROUX
+   ============================================ */
+.caroux-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.caroux-card {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.caroux-card:hover { transform: translateY(-5px); }
+
+.caroux-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+.caroux-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.caroux-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   SECTION TEMOIGNAGES
+   ============================================ */
+.temoignages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.temoignage-card {
+  background: white;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.stars {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 2px;
+}
+
+.temoignage-card p {
+  font-style: italic;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.8;
+}
+
+.temoignage-card cite {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.temoignages-cta {
+  text-align: center;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #e0e0e0;
+}
+
+.temoignages-cta a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   SECTION RESERVATION
+   ============================================ */
+.reservation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.reservation-info h2 { margin-bottom: var(--spacing-sm); }
+.reservation-info > p { color: var(--text-muted); margin-bottom: var(--spacing-md); }
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.contact-item svg {
+  width: 22px;
+  height: 22px;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.contact-item a { color: var(--text-dark); font-weight: 500; }
+.contact-item a:hover { color: var(--primary-color); }
+
+.reservation-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--primary-color);
+  color: rgba(255,255,255,0.7);
+  padding: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.footer-brand p { font-size: 0.85rem; }
+
+.footer-nav {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.footer-nav a {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+}
+
+.footer-nav a:hover { color: var(--secondary-color); }
+
+.footer-socials {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.footer-socials a {
+  color: white;
+  background: rgba(255,255,255,0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.footer-socials a:hover {
+  background: var(--secondary-color);
+  color: var(--text-dark);
+}
+
+.footer-bottom {
+  padding-top: var(--spacing-md);
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* ============================================
+   RESPONSIVE — MOBILE FIRST ADAPTATIONS
+   ============================================ */
+@media (max-width: 900px) {
+  .guide-grid { grid-template-columns: 1fr; }
+  .guide-photo { order: -1; }
+  .guide-img { height: 300px; }
+
+  .caroux-grid { grid-template-columns: 1fr; }
+
+  .reservation-grid { grid-template-columns: 1fr; }
+  .reservation-map { order: -1; }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav { flex-wrap: wrap; justify-content: center; }
+
+  .nav-links { display: none; }
+}
+
+@media (max-width: 600px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-tagline { font-size: 1rem; letter-spacing: 2px; }
+  .nav { padding: var(--spacing-sm) var(--spacing-md); }
+
+  .sorties-grid { grid-template-columns: 1fr; }
+
+  .section { padding: var(--spacing-lg) 0; }
+
+  .btn-large { padding: 1rem 2.5rem; font-size: 0.9rem; }
+}
