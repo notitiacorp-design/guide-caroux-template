@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accompagnateur en Montagne — Massif du Caroux</title>
+  <meta name="description" content="Randonn_GUIDE — Accompagnateur en montagne dans le Massif du Caroux / Parc du Haut-Languedoc. Randonnee, bivouac, decouverte nature.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ============================================
+     SECTION HERO — BANDEAU PRINCIPAL
+     ============================================ -->
+<header class="hero" id="accueil">
+  <nav class="nav">
+    <span class="logo">GUIDE-CAROUX</span>
+    <ul class="nav-links">
+      <li><a href="#le-guide">Le guide</a></li>
+      <li><a href="#sorties">Sorties</a></li>
+      <li><a href="#caroux">Le Caroux</a></li>
+      <li><a href="#temoignages">Avis</a></li>
+      <li><a href="#reservation">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="hero-content">
+    <!-- ==========================================================================
+         A PERSONNALISER : nom du guide (variable CSS --guide-name)
+         ========================================================================== -->
+    <h1 class="hero-title">Alexandre Dubois</h1>
+    <p class="hero-tagline">Accompagnateur en Montagne — Massif du Caroux</p>
+    <p class="hero-subtitle">Vivez la montagne autrement. Loin du bruit, au plus pres de la nature.</p>
+    <a href="#sorties" class="btn btn-primary">Explorer mes sorties</a>
+  </div>
+</header>
+
+<!-- ============================================
+     SECTION LE GUIDE — PRESENTATION
+     ============================================ -->
+<section class="section guide-section" id="le-guide">
+  <div class="container">
+    <div class="guide-grid">
+      <!-- ==============================================================
+           A PERSONNALISER : photo du guide (URL ou fichier local)
+           ============================================================== -->
+      <div class="guide-photo">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&q=80" alt="Alexandre Dubois — Accompagnateur en montagne" class="guide-img">
+      </div>
+      <div class="guide-info">
+        <h2 class="section-title">Alexandre Dubois</h2>
+        <p class="guide-role">Accompagnateur en Montagne diplome d'Etat</p>
+        <!-- ==============================================================
+             A PERSONNALISER : presentation du guide, diplomes, philosophie
+             Vous pouvez librement modifier ce texte
+             ============================================================== -->
+        <p>Originaire de Bedarieux, j'ai grandi entre les cedraies du Caroux et les gorges d'Heric. Passionne par ce massif sauvage, je partage aujourd'hui ma connaissance du terrain avec des randonneurs de tous niveaux.</p>
+        <p>Mon approche : une exploration lente et attentive, loin des sentiers battus. Je m'attache a vous faire decouvrir non seulement les paysages spectaculaires du Caroux, mais aussi sa flore, sa faune et ses histoires.</p>
+        <ul class="guide-credentials">
+          <li><span class="check">&#10003;</span> Accompagnateur en Montagne diplome d'Etat</li>
+          <li><span class="check">&#10003;</span> Diplome Universitaire d'Etudes Sup.</li>
+          <li><span class="check">&#10003;</span> Sauveteur en Milieu Montagnard</li>
+          <li><span class="check">&#10003;</span> ¿ 15 ans d'experience dans le Parc du Haut-Languedoc</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION SORTIES — ACTIVITES PROPOSEES
+     Pour activer/desactiver : ajouter/supprimer la classe 'active' sur les cartes
+     ============================================ -->
+<section class="section sorties-section" id="sorties">
+  <div class="container">
+    <h2 class="section-title center">Mes Sorties</h2>
+    <p class="section-subtitle center">Des experiences a pied ou a VTT, pour decouvrir le Caroux autrement.</p>
+    <div class="sorties-grid">
+
+      <!-- ==========================================================
+           ACTIVITE 1 : Randonnee Pedestre (ACTIVE)
+           Pour desactiver : supprimer cette carte ou ajouter class='hidden'
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">JOURNEE</div>
+        <!-- ==========================================================
+             A PERSONNALISER : image de l'activite
+             ========================================================== -->
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80" alt="Randonnee pedestre dans le Caroux">
+        <h3>Randonnee Pedestre</h3>
+        <p>Decouverte du massif a pied. Sentiers, cretes, gorges d'Heric. Adapte a votre niveau, de la balade familiale a la course serieuse.</p>
+        <div class="sortie-meta">
+          <span>¿ 4-12 km</span>
+          <span>¿ ¿ 2-6h</span>
+          <span>¿ 1-15 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+      <!-- ==========================================================
+           ACTIVITE 2 : Bivouac (ACTIVE)
+           Pour desactiver : supprimer cette carte ou ajouter class='hidden'
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">NUIT</div>
+        <img src="https://images.unsplash.com/photo-1534234828563-02511c9646e6?w=600&q=80" alt="Bivouac sous les etoiles dans le Haut-Languedoc">
+        <h3>Immersion Bivouac</h3>
+        <p>Passez une nuit dans le Parc du Haut-Languedoc. Installation du camp, partage autour du feu, lever de soleil sur les cedras.</p>
+        <div class="sortie-meta">
+          <span>¿ 1 nuit</span>
+          <span>¿ ¿ ?</span>
+          <span>¿ 2-8 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+      <!-- ==========================================================
+           ACTIVITE 3 : Plantes Sauvages (ACTIVE)
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">JOURNEE</div>
+        <img src="https://images.unsplash.com/photo-1596338222465-5b38e73a687b?w=600&q=80" alt="Randonnee et decouverte plantes sauvages">
+        <h3>Plantes Sauvages & Terroir</h3>
+        <p>Randonnee botanique. Apprenez a identifier les 100+ especes vegetales du Caroux, leurs usages comestibles et medicinales.</p>
+        <div class="sortie-meta">
+          <span>¿ 6-10 km</span>
+          <span>¿ 3-5h</span>
+          <span>¿ 2-10 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+      <!-- ==========================================================
+           ACTIVITE 4 : VTT (ACTIVE)
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">DEMI-JOURNEE</div>
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=600&q=80" alt="VTT dans le Caroux">
+        <h3>VTT — Trace sauvage</h3>
+        <p>Single tracks, descents techniques, vues panoramiques. Parcours sur mesure selon votre niveau technique et votre endurance.</p>
+        <div class="sortie-meta">
+          <span>¿ 15-30 km</span>
+          <span>¿ 3-5h</span>
+          <span>¿ 2-6 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+      <!-- ==========================================================
+           ACTIVITE 5 : VTTAE — Velo Electrique (OPTIONNEL)
+           Pour desactiver : ajouter class='hidden'
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">DEMI-JOURNEE</div>
+        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f778f7?w=600&q=80" alt="VTT electrique dans le massif">
+        <h3>VTTAE — Accessible a tous</h3>
+        <p>Decouvrez le Caroux a velo electrique. Un effort reduit pour un maximum de plaisir. Ideale pour familles, seniors, ou reprise d'activite physique.</p>
+        <div class="sortie-meta">
+          <span>¿ 20-40 km</span>
+          <span>¿ 3-4h</span>
+          <span>¿ 2-8 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+      <!-- ==========================================================
+           ACTIVITE 6 : Observation Faune (OPTIONNEL)
+           ========================================================== -->
+      <article class="sortie-card active">
+        <div class="sortie-badge">JOURNEE</div>
+        <img src="https://images.unsplash.com/photo-1518972559570-af71e4314649?w=600&q=80" alt="Observation de la faune du Caroux">
+        <h3>Observation Faune & Traces</h3>
+        <p>Apprenez a lire les traces, identifier les jumelles. Mouflons, sangliers, oiseaux de proie... Le Caroux regorge de vie.</p>
+        <div class="sortie-meta">
+          <span>¿ 8-12 km</span>
+          <span>¿ 4-6h</span>
+          <span>¿ 2-8 pers.</span>
+        </div>
+        <a href="#reservation" class="btn btn-secondary">Reserver</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION POURQUOI LE CAROUX
+     ============================================ -->
+<section class="section caroux-section" id="caroux">
+  <div class="container">
+    <h2 class="section-title center">Pourquoi le Massif du Caroux ?</h2>
+    <p class="section-subtitle center">Un territoire d'exception au coeur du Parc Natural du Haut-Languedoc.</p>
+    <div class="caroux-grid">
+      <!-- ==========================================
+           CARTE 1 : Paysages
+           ========================================== -->
+      <div class="caroux-card">
+        <div class="caroux-icon">
+          <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l4 8 5-5 1 10-12 2"/><path d="M21 21l-13-13-5 5-3-3"/></svg>
+        </div>
+        <h3>Panoramas a couper le souffle</h3>
+        <p>A 1091m au Signal de L’Escandorgue, le Massif du Caroux tend un panorama exceptionnel vers la mer Mediterranee et les Pyrenees. Les cretes de Mourles, les gorges d'Heric, les cedras et les landes offerts en spectacle.</p>
+      </div>
+      <!-- ==========================================
+           CARTE 2 : Biodiversite
+           ========================================== -->
+      <div class="caroux-card">
+        <div class="caroux-icon">
+          <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/><path d="M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/></svg>
+        </div>
+        <h3>Biodiversite exceptionnelle</h3>
+        <p>Zone Natura 2000 et Parc du Haut-Languedoc depuis 2005. 500+ especes de plantes, dont la gentiane aigue, des fougeres rares et de nombreuses especes protepees. Mouflons, sangliers, aigles de Bonelli, zostere apres-verny.</p>
+      </div>
+      <!-- ==========================================
+           CARTE 3 : Authenticite
+           ========================================== -->
+      <div class="caroux-card">
+        <div class="caroux-icon">
+          <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 012-2h2"/><path d="M17 3h2a2 2 0 012 2v2"/><path d="M21 17v2a2 2 0 01-2 2h-2"/><path d="M7 21H5a2 2 0 01-2-2v-2"/><circle cx="12" cy="12" r="3"/><path d="M12 16v3"/></svg>
+        </div>
+        <h3>Authenticite & Decouverte</h3>
+        <p>Loin des foules, pres des villages de caractere comme Olargues, Combes, Saint-Martin-de-l'Arcon. Un patrimoine megalithique, des dolmens, des mines de charbon abandonnees... et surtout une nature sauvage encore epargnee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION TEMOIGNAGES — AVIS GOOGLE / FACEBOOK
+     Zone prete a remplir avec de vrais avis
+     ============================================ -->
+<section class="section temoignages-section" id="temoignages">
+  <div class="container">
+    <h2 class="section-title center">Ils ont marche avec moi</h2>
+    <p class="section-subtitle center">Temodignages recueillis sur Google Reviews, Facebook et apres chaque sortie.</p>
+    <div class="temoignages-grid">
+
+      <!-- ==========================================
+           AVIS 1 — Remplacer par un vrai avis Google/FB
+           ========================================== -->
+      <div class="temoignage-card">
+        <div class="stars">?????</div>
+        <p>"Alexandre est un guide passionne qui a parfaitement su s'adapter a notre niveau. La balade dans les gorges d'Heric restera un souvenir memorables pour toute la famille. Merci !"</p>
+        <cite>— ? ??O?? ? ?????</cite>
+      </div>
+
+      <!-- ==========================================
+           AVIS 2 — Remplacer par un vrai avis
+           ========================================== -->
+      <div class="temoignage-card">
+        <div class="stars">?????</div>
+        <p>"Une experience incroyable. La decouverte des cedras et des especes endemiques du Caroux etait passionnante. On repart avec des yeux pleins d'etoiles et des chaussures pleines de terre."</p>
+        <cite>— ?_ ???? ? ??????</cite>
+      </div>
+
+      <!-- ==========================================
+           AVIS 3 — Remplacer par un vrai avis
+           ========================================== -->
+      <div class="temoignage-card">
+        <div class="stars">**** </div>
+        <p>"Sortie VTTAE parfaitement organises. Alexandre connait les sentiers comme sa poche et nous a montres des paysages magifiques. Recommande a 100%."</p>
+        <cite>— ?-^ ? |^??</cite>
+      </div>
+
+    </div>
+    <p class="temoignages-cta">
+      <a href="#" target="_blank" rel="noopener">Laissez un avis sur Google</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION RESERVATION — CONTACT
+     ============================================ -->
+<section class="section reservation-section" id="reservation">
+  <div class="container">
+    <div class="reservation-grid">
+      <div class="reservation-info">
+        <h2 class="section-title">Reservez votre sortie</h2>
+        <p>Envie d explorer le massif du Caroux avec un guide local ?<br>Contactez-moi pour organiser votre experience sur mesure.</p>
+        <!-- ==========================================================
+             A PERSONNALISER : telephone, email, lien reseau sociaux
+             ========================================================== -->
+        <div class="contact-details">
+          <div class="contact-item">
+            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <a href="tel:+33600000000">06 00 00 00 00</a>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6L12 13 2 6"/></svg>
+            <a href="mailto:pre.nom@proton.me">pre.nom@proton.me</a>
+          </div>
+          <div class="contact-item">
+            <svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Massif du Caroux, 34220 — Haut-Languedoc</span>
+          </div>
+        </div>
+        <a href="tel:+33600000000" class="btn btn-primary btn-large">Appeler pour reserver</a>
+      </div>
+      <div class="reservation-map">
+        <!-- ===================
+             PLAN GOOGLE MAPS
+             Remplacez le src par l'embed Google Maps de votre secteur
+             =================== -->
+        <iframe
+          width="100%"
+          height="400"
+          style="border:0; border-radius: 8px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116110.93206425852!2d2.89!3d43.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b5d6e4c8e8b4af%3A0x8a8b8c8e8b8c8b8c!2sMassif%20du%20Caroux!5e0!3m2!1sfr!2sfr!4v1615000000000!5m2!1sfr!2sfr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Carte du Massif du Caroux - Haut-Languedoc">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <span class="footer-logo">GUIDE-CAROUX</span>
+      <p>Accompagnateur en Montagne — Parc Natural du Haut-Languedoc</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#le-guide">Le guide</a>
+      <a href="#sorties">Sorties</a>
+      <a href="#caroux">Le Caroux</a>
+      <a href="#temoignages">Avis</a>
+      <a href="#reservation">Contact</a>
+    </nav>
+    <div class="footer-socials">
+      <!-- A PERSONNALISER : liens vers vos reseaux sociaux -->
+      <a href="#" title="Facebook" aria-label="Facebook">FB</a>
+      <a href="#" title="Instagram" aria-label="Instagram">IG</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Alexandre Dubois. Tous droits reserves.</p>
+  </div>
+</footer>
+
+</body>
+</html>
